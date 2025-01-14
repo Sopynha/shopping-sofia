@@ -48,10 +48,10 @@ with st.form("adicione_item"):
         centro = plt.Circle((0, 0), 0.70, fc='white')
         ax.add_artist(centro)
 
-    ax.set_title(f"Orçamento: {orcamento}€")
+        ax.set_title(f"Orçamento: {orcamento}€")
 
     # Display the plot in Streamlit
-    st.pyplot(fig)
+        st.pyplot(fig)
 
 # Display the data and budget information
 st.dataframe(dados)
