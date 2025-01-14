@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import matoplolib as plt
+import matplotlib as plt
 
 # Try to load the data from CSV, create an empty dataframe if it doesn't exist
 try:
