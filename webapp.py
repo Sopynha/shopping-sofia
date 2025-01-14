@@ -36,27 +36,7 @@ with st.form("adicione_item"):
         else:
             st.error("Sem orçamento suficiente")
 
-import streamlit as st
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# Assuming 'dados' DataFrame already exists
-orcamento = st.number_input("Orçamento", min_value=0.0)
-
-# Calculate the total of the prices
-total = dados["preços"].sum() if not dados.empty else 0
-
-# Check if the budget is greater than 0
-if orcamento > 0:
-    # Create the donut chart
-    fig, ax = plt.subplots(figsize=(8, 8))
-
-    if not dados.empty:
-        produtos = dados["produtos"].tolist()
-        valores = dados["preços"].tolist()
-        restante = orcamento - total
-        
-        # Add "Disponível" to the chart if there is remaining budget
+# Add "Disponível" to the chart if there is remaining budget
         if restante > 0:
             produtos.append("Disponível")
             valores.append(restante)
