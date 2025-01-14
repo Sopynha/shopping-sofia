@@ -1,8 +1,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import streamlit as st
-import pandas as pd
+
 
 # Try to load the data from CSV, create an empty dataframe if it doesn't exist
 try:
@@ -38,11 +37,7 @@ with st.form("adicione_item"):
         else:
             st.error("Sem orçamento suficiente")
 
-# Assuming 'dados' DataFrame already exists
-orcamento = st.number_input("Orçamento", min_value=0.0)
 
-# Calculate the total of the prices
-total = dados["preços"].sum() if not dados.empty else 0
 
 # Check if the budget is greater than 0
 if orcamento > 0:
